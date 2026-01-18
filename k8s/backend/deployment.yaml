@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: <ACCOUNT_ID>.dkr.ecr.<REGION>.amazonaws.com/notes-backend:1.0
+        image: 349070092739.dkr.ecr.us-east-1.amazonaws.com/notes-backend:1.0
         env:
         - name: DB_HOST
           value: postgres
