@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: notes-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: notes-backend
+  template:
+    metadata:
+      labels:
+        app: notes-backend
+    spec:
+      containers:
+      - name: backend
+        image: <ACCOUNT_ID>.dkr.ecr.<REGION>.amazonaws.com/notes-backend:1.0
+        env:
+        - name: DB_HOST
+          value: postgres
+        ports:
+        - containerPort: 3000
