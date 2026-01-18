@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: notes-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: notes-frontend
+  template:
+    metadata:
+      labels:
+        app: notes-frontend
+    spec:
+      containers:
+      - name: frontend
+        image: <ACCOUNT_ID>.dkr.ecr.<REGION>.amazonaws.com/notes-frontend:1.0
+        env:
+        - name: REACT_APP_API_URL
+          value: http://backend:3000
+        ports:
+        - containerPort: 3001
