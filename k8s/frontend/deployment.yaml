@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: <ACCOUNT_ID>.dkr.ecr.<REGION>.amazonaws.com/notes-frontend:1.0
+        image: 349070092739.dkr.ecr.us-east-1.amazonaws.com/notes-frontend:1.0
         env:
         - name: REACT_APP_API_URL
           value: http://backend:3000
