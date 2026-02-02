@@ -12,6 +12,8 @@ spec:
       labels:
         app: notes-backend
     spec:
+      imagePullSecrets:
+        - name: ecr-secret
       containers:
       - name: backend
         image: 349070092739.dkr.ecr.us-east-1.amazonaws.com/notes-backend:1.0
