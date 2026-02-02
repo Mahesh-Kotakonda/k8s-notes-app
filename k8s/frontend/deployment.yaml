@@ -21,4 +21,4 @@ spec:
         - name: REACT_APP_API_URL
           value: http://backend:3000
         ports:
-        - containerPort: 3001
+        - containerPort: 3000
